@@ -1,0 +1,2 @@
+echo *.mp4 >> .gitignore
+html/20260608ex/res/mov/apple.mp4

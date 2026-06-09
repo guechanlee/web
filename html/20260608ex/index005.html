@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+<body>
+
+    <!-- 양식 태그 -->
+    <form
+        action="http://192.168.0.105/newmember/sign-up" 
+        method="post"
+        name="signupform">
+        <input type="text" placeholder="회원 ID 입력">
+        <br>
+        <input type="text" placeholder="회원 NAME 입력">
+        <br>
+        <input type="password" placeholder="회원 PW 입력">
+        <br>
+        <input type="text" placeholder="회원 PHONE 입력">
+        <br>
+        <input type="email" placeholder="회원 MAIL 입력">        
+        <br>
+        <input type="number" value="10" min="1" max="20" placeholder="회원 AGE 입력">     
+        <br>
+        좋아하는 색상: <input type="color" value="#0000FF"> 
+        <!-- R G B : 255 0 0                 16진수로 R G B -->
+        <br>
+        생일: <input type="date">
+        <br>
+        공부하고 싶은 날짜 시간: <input type="datetime-local">
+        <br>
+        당신 국가:
+        <select>
+            <option>대한민국</option>
+            <option>미국</option>
+            <option>중국</option>
+            <option>영국</option>
+            <option>일본</option>
+        </select>
+        <br>
+        취미: 축구:<input type="checkbox"> 농구:<input type="checkbox"> 야구:<input type="checkbox"> 배구:<input type="checkbox">
+        <br>
+        성구분: 
+        남:<input type="radio" name="gender"> 
+        여:<input type="radio" name="gender">
+        <br>
+        직업:
+        학생:<input type="radio" name="job">
+        회사원:<input type="radio" name="job">
+        자영업:<input type="radio" name="job">
+        백수:<input type="radio" name="job">
+        은퇴:<input type="radio" name="job">
+        <!-- <button>회원가입</button> -->
+        <!-- <input type="button" value="회원가입"> -->
+        <input type="submit" value="회원가입"> <input type="reset" value="초기화">
+    </form>
+
+    <br><br>
+
+    <form
+        action="http://192.168.0.105/newmember/sign-up" 
+        method="post"
+        name="signinform">
+        <input type="text" placeholder="user id">
+        <br>
+        <input type="text" placeholder="user pw">
+        <br>
+        <textarea rows="10" cols="100"></textarea>
+        <br>
+        <input type="submit" value="로그인">
+    </form>
+
+</body>
+</html>

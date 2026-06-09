@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INDEX001</title>
+</head>
+    <body>
+        <h1>This page is INDEX001.</h1>
+        <h6>This page is INDEX001.</h6>
+        <img src="./res/img/apple.jpg" width="30%">
+        <br>
+        <video width="50%" controls>
+            <source src="./res/mov/apple.mp4" type="video/mp4">
+        </video>
+        <ul>
+            <li>메뉴001</li>
+            <li>메뉴002</li>
+            <li>메뉴003</li>
+            <li>메뉴004</li>
+        </ul>
+
+        <ol>
+            <li>menu001</li>
+            <li>menu002</li>
+            <li>menu003</li>
+            <li>menu004</li>
+        </ol>
+
+        <dl>
+            <dt>메뉴판</dt>
+            <dd>메뉴001</dd>
+            <dd>메뉴002</dd>
+            <dd>메뉴003</dd>
+            <dd>메뉴004</dd>
+        </dl>
+
+        <!-- form(양식) 태그 -->
+        <form action="서버URL" method="post" name="signupform">
+            <input type="text" placeholder="INPUT ID"> <br>
+            <input type="password" placeholder="INPUT PW"> <br>
+            <input type="email" placeholder="INPUT MAIL"> <br>
+            국가선택
+            <select>
+                <option>한국</option>
+                <option>일본</option>
+                <option>중국</option>
+            </select>
+            취미: 
+                야구<input type="checkbox"> 
+                농구<input type="checkbox"> 
+                배구<input type="checkbox">
+                축구<input type="checkbox"> <br>
+            성구분:
+                남<input type="radio" name="gender"> 
+                여<input type="radio" name="gender"> <br>
+            날짜: <input type="date"> <br>
+            날짜시간: <input type="datetime-local"> <br>
+            색상: <input type="color"> <br>
+            범위: <input type="range" min="0" max="100" value="0" step="10"> <br>
+            <input type="submit" value="회원가입">
+            <input type="reset" placeholder="초기화">
+
+
+
+        </form>
+    </body>
+</html>
