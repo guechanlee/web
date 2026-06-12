@@ -1,0 +1,87 @@
+#wrap {
+    width: 1450px;
+    margin: 10px auto;
+}
+
+#wrap div.slide_wrap {
+    position: relative;
+    top: 0; left: 0;
+    border-top: 1px dashed #dadada;
+    border-bottom: 1px dashed #dadada;
+    padding: 50px 0;
+}
+
+#wrap div.slide_wrap ul li.item_wrap {
+    position: relative;
+    top: 0; left: 0;
+    margin: 0 20px;
+}
+
+#wrap div.slide_wrap ul li.item_wrap div.thum img {
+    min-width: 250px;
+    max-width: 250px;
+    border-radius: 125px;
+}
+
+#wrap div.slide_wrap ul li.item_wrap div.goods_info {
+    width: 250px;
+    text-align: center;
+}
+
+#wrap div.slide_wrap ul li.item_wrap div.goods_price {
+    width: 250px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#wrap div.slide_wrap ul li.item_wrap div.goods_price span {
+    font-weight: normal;
+    font-size: .7em;
+}
+
+#wrap div.slide_wrap ul li.item_wrap div.no {
+    position: absolute;
+    top: 0; left: 0;
+    width: 50px; height: 50px;
+    line-height: 50px;
+    border-radius: 25px;
+    text-align: center;
+    background-color: #00c01e;
+    color:#fff;
+    font-size: bold;
+    font-size: 1.2em;
+}
+
+#wrap div.slide_wrap ul li.item_wrap div.sticker {
+    position: absolute;
+    top: 0; left: 40px;
+}
+
+#wrap div.slide_wrap ul li.item_wrap div.sticker img {
+    min-width: 50px;
+    max-width: 50px;
+    border-radius: 25px;
+}
+
+
+#wrap div.slide_wrap > div.left_arrow,
+#wrap div.slide_wrap > div.right_arrow {
+    width: 50px; height: 50px;
+    position: absolute;
+    top: 150px; left: 1425px;
+    border: 2px solid #dadada;
+    border-radius: 25px;
+    background-color: #fff;
+}
+
+#wrap div.slide_wrap > div.left_arrow {
+    left: -25px;
+}
+
+#wrap div.slide_wrap > div.left_arrow img,
+#wrap div.slide_wrap > div.right_arrow img {
+    min-width: 50px;
+    max-width: 50px;
+    border-radius: 25px;
+}

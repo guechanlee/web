@@ -1,0 +1,42 @@
+#qwer {
+    width: 1200px;
+    margin: 30px auto;
+}
+
+#qwer div.menu {
+    border: 1px solid rgba(200, 200, 200, 1.0);
+    float: left;
+    width: 200px;
+    font-size: 0.8em;
+    margin-right: 20px;
+}
+
+#qwer div.menu > ul {
+    padding-left: 20px;
+}
+
+#qwer div.letter {
+    border: 1px solid rgba(200, 200, 200, 1.0);
+    padding: 30px;
+    float: left;
+    width: 800px;
+}
+
+#qwer div.to {
+    padding: 5px 8px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: left;
+}
+
+#qwer div.title {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#qwer div.from {
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: right;
+}

@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #242424;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    overflow: hidden;
+}
+
+li {
+    list-style: none;
+}

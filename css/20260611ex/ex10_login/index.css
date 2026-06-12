@@ -1,0 +1,158 @@
+#wrap {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* 멀티 랭귀지 START */
+#wrap div.language {
+    text-align: right;
+}
+
+#wrap div.language select {
+    padding: 5px 8px;
+    border: 1px solid rgba(200, 200, 200, 1.0);
+    border-radius: 3px;
+}
+
+/* 멀티 랭귀지 END */
+
+/* 로고 START */
+#wrap div.logo {
+    margin: 60px 0 35px 0;
+}
+/* 로고 END */
+
+/* 로그인 양식 START */
+#wrap div.login_form {
+    width: 492px;
+    margin: 0 auto;
+    border: 1px solid #dadada;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#wrap div.login_form ul {
+    width: 450px;
+    margin: 0 auto;
+    padding-left: 0px;
+
+}
+
+#wrap div.login_form ul > li {
+    width: 150px;
+    border: 1px solid #dadada;
+    box-sizing: border-box;
+    padding: 10px;
+
+}
+
+#wrap div.login_form ul > li:nth-child(1) {
+    border-radius: 5px 0 0 5px;
+}
+
+#wrap div.login_form ul > li:nth-child(2) {
+    border-radius: 0;
+} 
+
+#wrap div.login_form ul > li:nth-child(3) {
+    border-radius: 0 5px 5px 0;
+}
+
+#wrap div.login_form ul > li:hover {
+    background-color: rgba(200, 200 ,200, .2);
+    cursor: pointer;
+}
+
+#wrap div.login_form > input {
+    width: 410px;
+    border: 1px solid #dadada;
+    padding: 15px 20px;
+    font-size: 1.1em;
+    outline: none;
+}
+
+#wrap div.login_form > input[name='m_id'] {
+    border-radius: 5px 5px 0 0;
+    margin-top: 15px;
+}
+
+#wrap div.login_form > input[name='m_pw'] {
+    border-radius: 0 0 5px 5px;
+}
+
+#wrap div.login_form > div {
+    width: 450px;
+    margin: 15px auto;
+    text-align: left;
+    font-size: .9em;
+    color: #5a5a5a;
+    font-weight: bold;
+}
+
+#wrap div.login_form > div > button {
+    width: 450px;
+    margin-top: 22px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #03c75a;
+    border: 0;
+    font-size: 1.5em;
+    padding: 10px 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+/* 로그인 양식 END */
+
+/* ID, PW 찾기 START */
+#wrap div.find_member {
+    width: 450px;
+    margin: 20px auto 40px;
+    font-size: .9em;
+    color: rgb(0, 0, 0)
+}
+
+#wrap div.find_member > a {
+    margin: 0 5px;
+}
+/* ID, PW 찾기 END */
+
+/* 베너 START */
+#wrap div.ad {
+    width: 460px;
+    margin: 0 auto 60px;
+}
+/* 베너 END */
+
+/* office START */
+#wrap div.office {
+    width: 500px;
+    margin: 0 auto 60px;
+    color: rgba(100, 100, 100, .8);
+}
+
+#wrap div.office > p {
+    margin-top: 10px;
+}
+
+#wrap div.office > p:nth-child(1) a {
+    font-size: .9m;
+    color: rgba(100, 100, 100, .3);
+}
+
+#wrap div.office > p:nth-child(2) {
+    font-size: .9em;
+}
+
+#wrap div.office > p:nth-child(2) img {
+    min-width: 90px;
+    max-width: 90px;
+}
+
+#wrap div.office > p:nth-child(2) > span {
+    margin-left: 10px;
+}
+
+
+
+/* office END */

@@ -1,0 +1,77 @@
+#wrap {
+    width: 1200px;
+    margin: 50px auto;
+}
+
+
+#wrap > ul > li {
+    float: left;
+
+}
+
+#wrap > ul > li.list {
+    width: 300px;
+}
+
+#wrap > ul > li.list > ul {
+    width: 270px;
+    padding: 10px;
+    border: 1px solid #dadada;
+    border-radius: 5px
+}
+
+#wrap > ul > li.list > ul > li {
+    padding: 7px;
+    height: 20px;
+}
+
+#wrap > ul > li.list > ul > li:hover {
+    background-color: rgba(200, 200, 200, .2);
+}
+
+#wrap > ul > li.list > ul > li > a{
+    text-decoration: none;
+}
+
+
+/* 편지지 START */
+#wrap > ul > li.letter {
+    width: 900px;
+}
+
+#wrap > ul > li.letter > div.letter_wrap {
+    padding: 20px 30px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+}
+
+#wrap > ul > li.letter div.to {
+    font-style: italic;
+    /* italic -> 기울기 */
+    margin-bottom: 50px;
+}
+
+#wrap > ul > li.letter div.head {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: double #dadada;
+}
+
+#wrap > ul > li.letter div.body {
+    width: 90%;
+    margin: 30px auto;
+}
+
+#wrap > ul > li.letter div.body p {
+    margin: 20px 0;
+}
+
+#wrap > ul > li.letter div.from {
+    text-align: right;
+    font-style: italic;
+    margin-top: 50px;
+}
+/* 편지지 END */

@@ -1,0 +1,24 @@
+#board {
+    margin: 0 auto;
+    width: 1000px;
+    
+}
+
+#board div.title {
+    text-align: center;
+    font-weight: bold;
+}
+
+#board div.board-table {
+    border: 1px solid ;
+    width: 100px auto;
+   
+}
+
+#board div.board-table td {
+    border: 1px solid ;
+    border-color:#000000;
+    width: 200px;
+    margin: 0 auto; 
+    box-sizing: border-box;
+}

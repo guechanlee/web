@@ -1,0 +1,15 @@
+/* * {
+    color: red;
+    margin: 0;
+    padding: 0;
+} */
+
+#ptag {
+    color:blue
+}
+
+input[type="text"] {
+    border-color: orange;
+    color:aqua;
+}
+
