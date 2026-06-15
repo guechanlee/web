@@ -1,0 +1,92 @@
+#wrap {
+    margin: 0px auto;
+    width: 800px;
+}
+
+/* 제목 START */
+#wrap > div.title_wrap {
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border-bottom: thick double #dadada;
+}
+
+#wrap > div.menu_wrap {
+    text-align: center;
+}
+
+#wrap > div.menu_wrap a{
+    display: inline-block;
+    width: 100px;
+    margin: 10px 5px;
+    padding: 10px;
+    border: 1px solid #dadada;
+    border-radius: 10px;
+}
+
+#wrap > div.menu_wrap a:hover {
+    background-color: #e0e0e0;
+    text-decoration: none;
+
+}
+
+/* 메뉴 END */
+
+/* 회원 가입 START */
+#wrap > div.menu_wrap a.sign_out {
+    text-align: center;
+    display: none;
+}
+
+
+
+/* 회원 가입 START */
+#wrap > div.sign_up_wrap {
+    text-align: center;
+    display: none;
+}
+
+/* 회원 가입 END */
+
+/* 일기 작성 START */
+#wrap > div.sign_in_wrap {
+    text-align: center;
+    display: none;
+}
+
+#wrap > div.write_wrap {
+    text-align: center;
+}
+
+#wrap > div.write_wrap > input,
+#wrap > div.write_wrap > button {
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid #dadada;
+    border-radius: 7px;
+    font-size: 1.2em;
+}
+
+#wrap > div.write_wrap > input {
+    width: 500px;
+}
+
+#wrap > div.write_wrap > button {
+    cursor:pointer;
+    
+}
+
+/* 일기 작성 END */
+
+/* 일기 리스트 START */
+#wrap > div.list_wrap {
+    text-align: center;
+    display: none;
+}
+
+/* 일기 리스트 END */
+
+
+/* 제목 END */
