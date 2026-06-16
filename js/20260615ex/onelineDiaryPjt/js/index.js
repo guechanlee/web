@@ -1,85 +1,208 @@
-// document > html > head > body > div > dom 트리
-document.addEventListener('DOMContentLoaded', function(){
-    console.log('DOCUMENT READY!!');
+//                           이벤트 종류         콜백함수
+document.addEventListener('DOMContentLoaded', function() {
+    
+    console.log('DOCUMENT READY!!')
+
+    // const el = document.querySelector('div.menu_wrap a.sign_up')
+    // console.log('--->', window,getComputedStyle(el).display);
+    // 무슨 형태의 블록인지 먼저 확인
 
     init();
 });
 
-// 커다란 도큐먼트 안에있는 엘리먼트중에 하나를 잡아야한다
-
 function init() {
-    console.log('init() CALLED!!');
-    
-    initViews();
-    addEvents();
+    console.log('init() CALLED!!')
 
-}
+    // set dumy data
+
+    
+    // 뷰와 관련된 내용
+    initViews();
+
+    // 이벤트와 관련된 내용
+    addEvents();
+}   
+
 
 
 
 function addEvents() {
-    console.log('addEvents() CALLED!!');
+    console.log('addEvents() CALLED!!')
 
+    // MENU BUTTON EVENT START
     let signUpMenuBtn = document.querySelector('div.menu_wrap a.sign_up');
-    signUpMenuBtn.addEventListener('click', function() {
-        console.log('signUpMenuBtn CLICKED!!');
+        signUpMenuBtn.addEventListener('click', function() {
+            console.log('signUpMenuBtn CLICKED!!')
 
-        showSelectedView(SIGN_UP_VIEW);
+            showSelectedView(SIGN_UP_VIEW);
 
-    });
-
-
+});
+    
     let signInMenuBtn = document.querySelector('div.menu_wrap a.sign_in');
-    signInMenuBtn.addEventListener('click', function() {
-        console.log('signInMenuBtn CLICKED!!');
+        signInMenuBtn.addEventListener('click', function() {
+            console.log('signInMenuBtn CLICKED!!')
 
-        showSelectedView(SIGN_IN_VIEW);
-    });
+            showSelectedView(SIGN_IN_VIEW);
+
+});
 
     let signOutMenuBtn = document.querySelector('div.menu_wrap a.sign_out');
-    signOutMenuBtn.addEventListener('click', function() {
-        console.log('signOutMenuBtn CLICKED!!');
+        signOutMenuBtn.addEventListener('click', function() {
+            console.log('signOutMenuBtn CLICKED!!')
 
-        showSelectedView(SIGN_OUT_VIEW);
-    });
+            signInedMemberId = '';
 
+            // 메뉴 체인지
+            setMenuByStatus(SIGN_OUT_STATUS);
+
+            // 뷰 체인지
+            showSelectedView(SIGN_OUT_VIEW);
+
+});
+
+     let deleteMenuBtn = document.querySelector('div.menu_wrap a.delete');
+        deleteMenuBtn.addEventListener('click', function() {
+            console.log('deleteMenuBtn CLICKED!!')
+
+            removeMember();
+            alert('CONGRATURATION REMOVE!!')
+
+            signInedMemberId == '';
+
+            setMenuByStatus(SIGN_OUT_STATUS);
+
+            showSelectedView(HOME_VIEW);
+            
+});
     let writeMenuBtn = document.querySelector('div.menu_wrap a.write');
-    writeMenuBtn.addEventListener('click', function() {
-        console.log('writeMenuBtn CLICKED!!');
+        writeMenuBtn.addEventListener('click', function() {
+            console.log('writeMenuBtn CLICKED!!');
 
-        showSelectedView(DIARY_WRITE_VIEW);
-    });
+
+        if (signInedMemberId === '') {
+            alert('Please SIGN IN!!');
+            showSelectedView(SIGN_IN_VIEW);
+            return;
+
+        }
+        
+        showSelectedView(WRITE_VIEW);
+            
+});
 
     let listMenuBtn = document.querySelector('div.menu_wrap a.list');
-    listMenuBtn.addEventListener('click', function() {
-        console.log('listMenuBtn CLICKED!!');
+        listMenuBtn.addEventListener('click', function() {
+            console.log('listMenuBtn CLICKED!!');
 
-        showSelectedView(DIARY_LIST_VIEW);
-    });
+            if (signInedMemberId === '') {
+                alert('Please SIGN IN!!');
+                showSelectedView(SIGN_IN_VIEW);
+                return;
+            }
 
-    let signUpBtn = document.querySelector('div.sign_up_wrap input[type="button"]')
-    signUpBtn.addEventListener('click', function() {
-        console.log('signUpBtn CALLED!!');
+            listUpDiaries();
 
-        let u_id = document.querySelector('div.sign_up_wrap input[name=u_id]').value;
-        let u_pw = document.querySelector('div.sign_up_wrap input[name=u_pw]').value;
-        let u_mail = document.querySelector('div.sign_up_wrap input[name=u_mail]').value;
+            showSelectedView(LIST_VIEW);
 
-        addMember(u_id, u_pw, u_mail);
+           
+});
+    // MENU BUTTON EVENT END
 
-        alert('SIGN UP SUCCESS!!')
 
-        document.querySelector('div.sign_up_wrap input[name=u_id]').value = '';
-        document.querySelector('div.sign_up_wrap input[name=u_pw]').value = '';
-        document.querySelector('div.sign_up_wrap input[name=u_mail]').value = '';
+    // SIGN UP 버튼을 누르면 함수를 실행해라
+    let signUpBtn = document.querySelector('div.sign_up_wrap input[type="button"]');
+        signUpBtn.addEventListener('click', function() {
+            console.log('signUpBtn CLICKED!!');
+
+        let uIdEle = document.querySelector('div.sign_up_wrap input[name="u_id"]')
+        let uPwEle = document.querySelector('div.sign_up_wrap input[name="u_pw"]')
+        let uMailEle = document.querySelector('div.sign_up_wrap input[name="u_mail"]')
+
+        alert('SIGNUP SUCCESS!!')
+        
+        addMember(uIdEle.value, uPwEle.value, uMailEle.value);
+
+        removeValue([uIdEle, uPwEle, uMailEle]);
+
+});         
+
+    let signInBtn = document.querySelector('div.sign_in_wrap input[type="button"]');
+        signInBtn.addEventListener('click', function() {
+            console.log('signInBtn CLICKED!!');
+
+        let uIdEle = document.querySelector('div.sign_in_wrap input[name="u_id"]');
+        let uPwEle = document.querySelector('div.sign_in_wrap input[name="u_pw"]');
+        
+        let isMember = searchMember(uIdEle.value, uPwEle.value); 
+    
+        
+        if (isMember) {
+            signInedMemberId = uIdEle.value;
+            alert('SIGNIN SUCCESS!!');
+
+            setMenuByStatus(SIGN_IN_STATUS);
+
+            showSelectedView(HOME_VIEW);
+            
+        } else {
+            signInedMemberId = '';
+            alert('SIGNIN FAIL!!');
+
+            setMenuByStatus(SIGN_OUT_STATUS);
+        }
+
+        
+                  
+        removeValue([uIdEle, uPwEle])
+        
+
+});         
+
+    let writeBtn = document.querySelector('div.write_wrap button');
+    writeBtn.addEventListener('click', function() {
+        console.log('writeBtn CLICKED!!');
+
+        let txt = document.querySelector('div.write_wrap input').value;
+
+        
+        addDiary(getCurrentDate() + txt);
+
+        removeValue([document.querySelector('div.write_wrap input')]);
+
+        showSelectedView(LIST_VIEW);
+
     });
 }
 
+function removeValue(eles) {
+    console.log('removeValue() CALLED!!');
 
-// querySelector -> css선택자 
+    for(let i = 0; i < eles.length; i++) 
+        eles[i].value = '';
+    }
 
-// 내가 뛰운 웹문서에 귓대기를 하나 단다 랜더링되다가 끝날때 쯤 DOMContentLoaded 로 알려줘
-// 랜더링이 다되면 document라는 웹문서에다가 DOMContentLoaded라고 알려준다
+function listUpDiaries() {
+    console.log('listUpDiaries() CALLED!!');
 
-// 콜백 함수 
-//엘리먼트
+    listWrap.textContent = '';
+
+    let diaryArr = searchDiaries();
+    
+    for (let i = 0; i < diaryArr.length; i++) {
+
+        let tpl = document.querySelector('#list_item');
+        // 템플릿을 선택
+        let clone = document.importNode(tpl.content, true);
+        // importNode로 복제
+        let txt = clone.querySelector('div.txt');
+        // 그중에 'div.txt' 를 가져온다
+        txt.textContent = diaryArr[i];
+
+        listWrap.prepend(clone);
+    }
+
+}
+
+
+
+    

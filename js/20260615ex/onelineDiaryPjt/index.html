@@ -6,9 +6,15 @@
     <title>ONELINE DIARY</title>
     <link href="./css/common.css" rel="stylesheet">
     <link href="./css/index.css" rel="stylesheet">
+
     <script src="./js/index.js"></script>
     <script src="./js/viewChange.js"></script>
+    <script src="./js/menuChange.js"></script>
     <script src="./js/db.js"></script>
+    <script src="./js/dumy.js"></script>
+    <script src="./js/sessiong.js"></script>
+    <script src="./js/util.js"></script>
+
 
 </head>
 <body>
@@ -25,6 +31,7 @@
             <a class=sign_up href="#none">Sign-up</a>
             <a class=sign_in href="#none">Sign-in</a>
             <a class=sign_out href="#none">Sign-out</a>
+            <a class=delete href="#none">DELETE</a>
             <a class=write href="#none">Write</a>
             <a class=list href="#none">List</a>
         </div>
@@ -59,6 +66,8 @@
         <!-- 일기 리스트 페이지 -->
         <div class="list_wrap">
             list...
+            <!-- HTML의 <template> 요소에 브라우저가 즉시 렌더링하지 않는 HTML 조각을 보관하는 컨테이너입니다.
+            나중에 javascript로 필요할때 복제해서 DOM에 삽입할 수 있습니다.  -->
         </div>
 
         <!-- 회원 리스트 페이지 -->
@@ -70,3 +79,9 @@
 
 </body>
 </html>
+
+<template id="list_item">
+    <div class="txt">
+
+    </div>
+</template>

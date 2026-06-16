@@ -29,7 +29,11 @@
 #wrap > div.menu_wrap a:hover {
     background-color: #e0e0e0;
     text-decoration: none;
+}
 
+#wrap > div.menu_wrap a.sign_out,
+#wrap > div.menu_wrap a.delete {
+    display: none;
 }
 
 /* 메뉴 END */
@@ -58,6 +62,7 @@
 
 #wrap > div.write_wrap {
     text-align: center;
+    display: none;
 }
 
 #wrap > div.write_wrap > input,
@@ -84,6 +89,14 @@
 #wrap > div.list_wrap {
     text-align: center;
     display: none;
+}
+
+#wrap > div.list_wrap div {
+    border: 1px solid #dadada;
+    border-radius: 7px;
+    width: 600px;
+    padding: 10px;
+    margin: 2px auto;
 }
 
 /* 일기 리스트 END */
