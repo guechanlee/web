@@ -34,7 +34,7 @@ function removeMember() {
     // memberDB 에서 signInedMemberId를 가져온다
     memberDB.delete(signInedMemberId);
 
-    console.log('memberDB: ', memberDB)
+    console.log('memberDB: ', memberd)
 
 }
 
